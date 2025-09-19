@@ -216,6 +216,85 @@ header ul li a:hover {
     font-size: 0.9rem;
 }
 
+/* --- STYLING PORTFOLIO YANG DITAMBAHKAN --- */
+#portfolio {
+    background: var(--secondary-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.project-tags {
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    padding: 5px 12px;
+    margin: 2px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+
 /* Footer */
 footer {
     background: var(--dark-color);
@@ -233,19 +312,45 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
+/* --- RESPONSIVE DESIGN --- */
+/* Untuk Tablet dan layar yang lebih kecil */
 @media(max-width: 768px) {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 1.8rem; }
+    section { padding: 40px 0; }
     
     header .container {
         flex-direction: column;
     }
     header ul {
-        margin-top: 10px;
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
-    .experience-grid {
+    .experience-grid, .portfolio-grid {
         grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+/* Untuk Ponsel */
+@media(max-width: 480px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+    }
+    .btn {
+        width: 90%;
+        padding: 12px 0;
+    }
+    .container {
+        padding: 0 15px;
     }
 }
