@@ -1,0 +1,251 @@
+/* General Styling */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #f4f4f4;
+    --dark-color: #333;
+    --light-color: #fff;
+    --text-color: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--dark-color);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Header & Navbar */
+header {
+    background: var(--light-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    padding: 5px 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+#hero {
+    background: var(--light-color);
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+.btn-primary:hover {
+    background: #004494;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* About Section */
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Card Styling for Experience & Education */
+.card {
+    background: var(--light-color);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.card-subtitle {
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style-position: inside;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Skills Section */
+.skills-category {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skills-category h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.skills-tags span {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer a {
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    
+    header .container {
+        flex-direction: column;
+    }
+    header ul {
+        margin-top: 10px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+}
