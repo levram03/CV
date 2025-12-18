@@ -221,7 +221,7 @@ header ul li a:hover {
 
 .project-card img {
     width: 100%;
-    height: 200px;
+    height: 250px; /* Coba naikkan nilainya */
     object-fit: contain;
     background-color: #2b303b;
 }
