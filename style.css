@@ -30,7 +30,7 @@ h1 { font-size: clamp(3rem, 10vw, 5rem); font-weight: 800; line-height: 0.9; let
 .btn-resume-hero:hover { border-color: #fff; }
 .btn-main { background: white; color: black; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
 
-.profile-img { width: 100%; max-width: 320px; border-radius: 12px; filter: grayscale(100%); border: 1px solid var(--border); transition: 0.5s; }
+.profile-img { width: 100%; max-width: 320px; border-radius: 12px; filter: grayscale(100%); border: 0px solid var(--border); transition: 0.5s; }
 .profile-img:hover { filter: grayscale(0%); }
 
 /* About */
