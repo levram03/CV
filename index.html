@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marvel Benyamin | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <nav class="container">
             <a href="#" class="logo">MB</a>
-            <ul>
-                <li><a href="#about">About Me</a></li>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Projects</a></li>
             </ul>
         </nav>
     </header>
@@ -26,111 +26,85 @@
     <main>
         <section id="hero">
             <div class="container hero-content">
-                <img src="profile.jpg" alt="Marvel Benyamin Photo" class="profile-picture">
-                <h1>MARVEL BENYAMIN</h1>
-                <p class="subtitle">Computer Science Student with a focus on Network Technology</p>
-                <div class="hero-buttons">
-                    <a href="Marvel_Benyamin_CV.pdf" class="btn btn-primary" download>Download CV</a>
-                    <a href="mailto:marvel.benyamin@binus.ac.id" class="btn btn-secondary">Contact Me</a>
+                <div class="hero-text">
+                    <p class="intro">Hi, I am</p>
+                    <h1>MARVEL BENYAMIN</h1>
+                    <p class="subtitle">Computer Science Student at Bina Nusantara University focusing on <span>Network Technology</span>.</p>
+                    <div class="hero-buttons">
+                        <a href="mailto:marvel.benyamin@binus.ac.id" class="btn btn-primary">Contact Me</a>
+                        <a href="Marvel_Benyamin_CV.pdf" class="btn btn-outline" download>Resume</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="profile.jpg" alt="Marvel Benyamin" class="profile-pic">
                 </div>
             </div>
         </section>
 
         <section id="about" class="container">
-            <h2>About Me</h2>
-            <p>
-                I am a 5th-semester Computer Science student at Bina Nusantara University focusing on Network Technology. I possess strong leadership experience as a former Student Council President and am active in university-level organizations. I am highly motivated to learn, adapt quickly, and eager to apply my technical knowledge and interpersonal skills in a professional environment.
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">
+                I am a 5th-semester Computer Science student. I possess strong leadership experience as a former Student Council President and am active in university-level organizations. I am highly motivated to learn and adapt quickly to professional environments.
             </p>
         </section>
 
         <section id="experience" class="container">
-            <h2>Organizational Experience</h2>
-            <div class="experience-grid">
-                <div class="card">
-                    <h3>Student Council President</h3>
-                    <p class="card-subtitle">SMA Tarsisius 2 | 2021-2022 Period</p>
-                    <ul>
-                        <li>Led and coordinated a student council team of 20+ members in designing and executing over 15 annual work programs.</li>
-                        <li>Responsible for the planning, budgeting, and execution of major school events, including new student orientation and art festivals (Pensi).</li>
-                        <li>Served as the primary student representative, bridging communication between students, teachers, and school management.</li>
-                        <li>Developed leadership, time management, and problem-solving skills.</li>
-                    </ul>
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date">Sept 2024 - 2025</span>
+                    <h3>Bina Nusantara Oikoumene Fellowship Activist</h3>
+                    <p>Collaborating in planning spiritual programs and assisting in event documentation.</p>
                 </div>
-                <div class="card">
-                    <h3>Bina Nusantara Oikoumene Fellowship (PO) Activist</h3>
-                    <p class="card-subtitle">Bina Nusantara | September 2024 - 2025</p>
-                    <ul>
-                        <li>Actively collaborate with team members in planning and executing various spiritual and social programs.</li>
-                        <li>Participate in event committees, specifically assisting in documentation to ensure smooth event operations.</li>
-                        <li>Developed teamwork and communication skills within a diverse organizational environment.</li>
-                    </ul>
+                <div class="timeline-item">
+                    <span class="date">2021 - 2022</span>
+                    <h3>Student Council President</h3>
+                    <p>Led a team of 20+ members at SMA Tarsisius 2 and coordinated over 15 annual programs.</p>
                 </div>
             </div>
         </section>
 
         <section id="education" class="container">
-            <h2>Education</h2>
-            <div class="card">
-                <h3>Bina Nusantara University (BINUS)</h3>
-                <p class="card-subtitle">Bachelor of Computer Science - Network Technology Streaming | GPA: 3.32 / 4.00</p>
-                <p><strong>Relevant Coursework:</strong> Computer Networks, Network Security, Computer Architecture, Operating Systems, Algorithms and Data Structures.</p>
-            </div>
-             <div class="card">
-                <h3>SMA Tarsisius 2, Jakarta</h3>
-                <p class="card-subtitle">Natural Sciences Major | Graduated 2023</p>
+            <h2 class="section-title">Education</h2>
+            <div class="edu-card">
+                <div class="edu-info">
+                    <h3>Bina Nusantara University</h3>
+                    <p>Bachelor of Computer Science - Network Technology</p>
+                </div>
+                <div class="edu-gpa">GPA 3.32 / 4.00</div>
             </div>
         </section>
 
         <section id="portfolio" class="container">
-            <h2>Project Portfolio</h2>
-            <div class="portfolio-grid">
+            <h2 class="section-title">Project</h2>
+            <div class="project-grid">
                 <div class="project-card">
-                    <img src="softeng-project.jpg" alt="Software Engineering Project">
-                    <div class="project-content">
-                        <h3>Software Engineering Project (SoftEng)</h3>
-                        <p>
-                            A project for the Software Engineering course. <strong>My primary role was to design the user interface (UI/UX) and perform functional testing to ensure all website features operated correctly before delivery.</strong>
-                        </p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>UI/UX Design</span>
-                            <span>Testing</span>
+                    <div class="project-img-wrapper">
+                        <img src="softeng-project.jpg" alt="Software Engineering Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>KPRGENIE - SoftEng Project</h3>
+                        <p>Designed UI/UX and performed functional testing for a loan prediction tool website.</p>
+                        <div class="tags">
+                            <span>HTML</span><span>CSS</span><span>UI/UX</span>
                         </div>
-                        <a href="https://github.com/levram03/SoftEng" target="_blank" class="btn-link">View on GitHub &rarr;</a>
+                        <a href="https://github.com/levram03/SoftEng" class="project-link">View Project &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="container">
-            <h2>Skills</h2>
-            <div class="skills-category">
-                <h4>Technical Skills</h4>
-                <div class="skills-tags">
-                    <span>Cisco Packet Tracer</span><span>OSI & TCP/IP</span><span>Subnetting</span><span>Routing & Switching</span><span>Windows</span><span>Linux (Basic)</span><span>Microsoft Office Suite</span>
-                </div>
-            </div>
-            <div class="skills-category">
-                <h4>Soft Skills</h4>
-                <div class="skills-tags">
-                    <span>Leadership</span><span>Teamwork & Collaboration</span><span>Communication & Presentation</span><span>Time Management</span><span>Problem Solving</span>
-                </div>
-            </div>
-            <div class="skills-category">
-                <h4>Languages</h4>
-                <div class="skills-tags">
-                    <span>Indonesian</span><span>English</span>
-                </div>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-wrapper">
+                <span>Cisco Packet Tracer</span><span>OSI & TCP/IP</span><span>Subnetting</span><span>Routing & Switching</span><span>Windows/Linux</span>
             </div>
         </section>
-
     </main>
 
     <footer>
         <div class="container">
-            <p>Contact me at <a href="mailto:marvel.benyamin@binus.ac.id">marvel.benyamin@binus.ac.id</a> or <a href="tel:+628561972386">+628561972386</a></p>
-            <p>&copy; 2025 by Marvel Benyamin.</p>
+            <p>&copy; 2025 Marvel Benyamin. Built with focus.</p>
         </div>
     </footer>
 

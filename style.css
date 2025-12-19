@@ -1,10 +1,10 @@
-/* General Styling */
 :root {
-    --primary-color: #0056b3;
-    --secondary-color: #f4f4f4;
-    --dark-color: #333;
-    --light-color: #fff;
-    --text-color: #555;
+    --bg: #ffffff;
+    --text-primary: #111111;
+    --text-secondary: #666666;
+    --accent: #0070f3; /* Biru khas developer modern */
+    --border: #eaeaea;
+    --card-hover: #fafafa;
 }
 
 * {
@@ -13,345 +13,231 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-primary);
     line-height: 1.6;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
-h1, h2, h3 {
-    color: var(--dark-color);
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--primary-color);
-    display: inline-block;
-}
-
-section {
-    padding: 60px 0;
-    text-align: center;
-}
-
-/* Header & Navbar */
+/* Header */
 header {
-    background: var(--light-color);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 100%;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
 }
 
-header .container {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    height: 70px;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    font-weight: 800;
     text-decoration: none;
+    color: var(--text-primary);
+    font-size: 1.2rem;
 }
 
-header ul {
-    list-style: none;
+.nav-links {
     display: flex;
+    list-style: none;
+    gap: 24px;
 }
 
-header ul li a {
+.nav-links a {
     text-decoration: none;
-    color: var(--dark-color);
-    padding: 5px 15px;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
-header ul li a:hover {
-    color: var(--primary-color);
-}
+.nav-links a:hover { color: var(--accent); }
 
 /* Hero Section */
 #hero {
-    background: var(--light-color);
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .hero-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
+    gap: 40px;
 }
 
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--primary-color);
-    margin-bottom: 20px;
+.intro {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
-#hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 16px;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin-bottom: 32px;
 }
 
+.subtitle span { color: var(--text-primary); font-weight: 600; }
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.profile-pic:hover { filter: grayscale(0%); }
+
+/* Buttons */
 .btn {
-    display: inline-block;
-    padding: 12px 25px;
+    padding: 10px 24px;
+    border-radius: 6px;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: 600;
-    transition: all 0.3s ease;
-    margin: 5px;
-}
-
-.btn-primary {
-    background: var(--primary-color);
-    color: var(--light-color);
-}
-
-.btn-primary:hover {
-    background: #004494;
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-}
-
-.btn-secondary:hover {
-    background: var(--primary-color);
-    color: var(--light-color);
-}
-
-/* About Section */
-#about p {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Card Styling for Experience & Education */
-.card {
-    background: var(--light-color);
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    text-align: left;
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-.card-subtitle {
-    font-weight: 600;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.card ul {
-    list-style-position: inside;
-}
-
-.card ul li {
-    margin-bottom: 10px;
-}
-
-.experience-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-/* Styling Portofolio */
-#portfolio {
-    background: var(--secondary-color);
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.project-card {
-    background: var(--light-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.project-card img {
-    width: 100%;
-    height: 250px; /* Coba naikkan nilainya */
-    object-fit: contain;
-    background-color: #2b303b;
-}
-
-.project-content {
-    padding: 25px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.project-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-}
-
-.project-content p {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-    flex-grow: 1;
-}
-
-.project-tags {
-    margin-bottom: 20px;
-}
-
-.project-tags span {
-    display: inline-block;
-    background: var(--secondary-color);
-    color: var(--text-color);
-    padding: 5px 12px;
-    margin: 2px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.btn-link {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 600;
-    align-self: flex-start;
-}
-
-.btn-link:hover {
-    text-decoration: underline;
-}
-
-/* Skills Section */
-.skills-category {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.skills-category h4 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: var(--dark-color);
-}
-
-.skills-tags span {
-    display: inline-block;
-    background: var(--primary-color);
-    color: var(--light-color);
-    padding: 8px 15px;
-    margin: 5px;
-    border-radius: 20px;
     font-size: 0.9rem;
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+.btn-primary { background: var(--text-primary); color: white; border: 1px solid var(--text-primary); }
+.btn-primary:hover { background: #333; }
+
+.btn-outline { border: 1px solid var(--border); color: var(--text-secondary); margin-left: 12px; }
+.btn-outline:hover { background: var(--card-hover); border-color: #333; color: var(--text-primary); }
+
+/* Section Generic */
+section { padding: 80px 0; }
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-title::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: var(--border);
+}
+
+/* Experience Timeline */
+.timeline-item {
+    margin-bottom: 32px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid var(--border);
+}
+
+.date { font-size: 0.85rem; color: var(--text-secondary); }
+.timeline-item h3 { font-size: 1.1rem; margin: 4px 0; }
+
+/* Education Card */
+.edu-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.edu-gpa {
+    font-weight: 700;
+    background: #f0f7ff;
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* Projects */
+.project-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.project-card:hover { border-color: var(--accent); }
+
+.project-img-wrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info { padding: 24px; }
+.tags { margin: 12px 0; display: flex; gap: 8px; }
+.tags span {
+    font-size: 0.75rem;
+    background: #f5f5f5;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Skills */
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills-wrapper span {
+    border: 1px solid var(--border);
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
 }
 
 /* Footer */
 footer {
-    background: var(--dark-color);
-    color: var(--light-color);
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
     text-align: center;
-    padding: 30px 0;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
 }
 
-footer a {
-    color: var(--light-color);
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* --- RESPONSIVE DESIGN --- */
-/* Untuk Tablet dan layar yang lebih kecil */
-@media(max-width: 768px) {
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content { flex-direction: column-reverse; text-align: center; }
     h1 { font-size: 2.5rem; }
-    h2 { font-size: 1.8rem; }
-    section { padding: 40px 0; }
-    
-    header .container {
-        flex-direction: column;
-    }
-    header ul {
-        margin-top: 15px;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .experience-grid, .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        padding: 20px;
-    }
-
-    .project-card img {
-        height: 160px; /* Perkecil tinggi gambar di tablet/HP */
-    }
-}
-
-/* Untuk Ponsel */
-@media(max-width: 480px) {
-    #hero h1 {
-        font-size: 2rem;
-    }
-    .subtitle {
-        font-size: 1rem;
-    }
-    .btn {
-        width: 90%;
-        padding: 12px 0;
-    }
-    .container {
-        padding: 0 15px;
-    }
+    .nav-links { display: none; } /* Untuk simple mobile, sembunyikan nav */
 }
