@@ -3,108 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvel Benyamin | Portfolio</title>
+    <title>Marvel Benyamin | Network Technology</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav class="container">
-            <a href="#" class="logo">MB</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="container nav-flex">
+            <a href="#home" class="logo">MB.</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="resume.html" class="nav-resume">Resume</a>
+            </div>
+        </div>
+    </nav>
 
-    <main>
-        <section id="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <p class="intro">Hi, I am</p>
-                    <h1>MARVEL BENYAMIN</h1>
-                    <p class="subtitle">Computer Science Student at Bina Nusantara University focusing on <span>Network Technology</span>.</p>
-                    <div class="hero-buttons">
-                        <a href="mailto:marvel.benyamin@binus.ac.id" class="btn btn-primary">Contact Me</a>
-                        <a href="Marvel_Benyamin_CV.pdf" class="btn btn-outline" download>Resume</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="profile.jpg" alt="Marvel Benyamin" class="profile-pic">
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="badge">Student @ BINUS University</span>
+                <h1>Marvel <br> Benyamin</h1>
+                <p>Computer Science student focusing on <strong>Network Technology</strong>. Passionate about leadership and technology.</p>
+                <div class="cta">
+                    <a href="mailto:marvel.benyamin@binus.ac.id" class="btn-main">Get in touch</a>
                 </div>
             </div>
-        </section>
+            <div class="hero-img-wrapper">
+                <img src="profile.jpg" alt="Marvel Benyamin" class="profile-img">
+            </div>
+        </div>
+    </section>
 
-        <section id="about" class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                I am a 5th-semester Computer Science student. I possess strong leadership experience as a former Student Council President and am active in university-level organizations. I am highly motivated to learn and adapt quickly to professional environments.
-            </p>
-        </section>
-
-        <section id="experience" class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="date">Sept 2024 - 2025</span>
-                    <h3>Bina Nusantara Oikoumene Fellowship Activist</h3>
-                    <p>Collaborating in planning spiritual programs and assisting in event documentation.</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="date">2021 - 2022</span>
-                    <h3>Student Council President</h3>
-                    <p>Led a team of 20+ members at SMA Tarsisius 2 and coordinated over 15 annual programs.</p>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-label">01. About Me</h2>
+            <div class="about-content">
+                <p>I am a 5th-semester student with a GPA of 3.32. I have strong leadership experience as a former Student Council President and remain active in campus organizations.</p>
+                <div class="about-actions">
+                    <a href="resume.html" class="btn-outline">View Full Resume →</a>
                 </div>
             </div>
-        </section>
-
-        <section id="education" class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="edu-card">
-                <div class="edu-info">
-                    <h3>Bina Nusantara University</h3>
-                    <p>Bachelor of Computer Science - Network Technology</p>
-                </div>
-                <div class="edu-gpa">GPA 3.32 / 4.00</div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="container">
-            <h2 class="section-title">Project</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img src="softeng-project.jpg" alt="Software Engineering Project">
-                    </div>
-                    <div class="project-info">
-                        <h3>KPRGENIE - SoftEng Project</h3>
-                        <p>Designed UI/UX and performed functional testing for a loan prediction tool website.</p>
-                        <div class="tags">
-                            <span>HTML</span><span>CSS</span><span>UI/UX</span>
-                        </div>
-                        <a href="https://github.com/levram03/SoftEng" class="project-link">View Project &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-wrapper">
-                <span>Cisco Packet Tracer</span><span>OSI & TCP/IP</span><span>Subnetting</span><span>Routing & Switching</span><span>Windows/Linux</span>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Marvel Benyamin. Built with focus.</p>
+            <p>© 2025 Marvel Benyamin. Inspired by minimal design.</p>
         </div>
     </footer>
 
